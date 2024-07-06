@@ -1,19 +1,33 @@
 {
-  "name": "availeek",
+  "name": "my-webpack-project",
   "version": "1.0.0",
-   "main": "main.js",
+  "main": "main.js",
   "type": "module",
-
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "My webpack project",
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@webpack-cli/generators": "^3.0.7",
+    "babel-loader": "^9.1.3",
+    "prettier": "^3.3.2",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "workbox-webpack-plugin": "^7.1.0"
+  },
   "dependencies": {
+    "@fleekxyz/cli": "^2.1.0-dev.1",
     "@polkadot/api": "^10.12.4",
     "@polkadot/extension-dapp": "^0.46.8",
-      "avail-js-sdk": "^0.2.12"
+    "avail-js-sdk": "^0.2.12"
   }
 }
